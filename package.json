@@ -5,14 +5,16 @@
   "main": "server.js",
   "scripts": {
     "server": "node backend/server.js",
-    "dev": "nodemon backend/server.js",
-    "build":"npm install --prefix ./FrontENd && npm run build --prefix ./FrontENd && npm install"
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix ./FrontENd && npm run build --prefix ./FrontENd && npm install"
   },
   "author": "Chitranshi",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",

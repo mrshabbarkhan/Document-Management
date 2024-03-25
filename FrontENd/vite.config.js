@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:11000",
+        target: "https://document-management-3.onrender.com/",
         changeOrigin: true,
         secure: false,
       },

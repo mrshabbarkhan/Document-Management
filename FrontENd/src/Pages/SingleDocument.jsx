@@ -6,7 +6,11 @@ import EditIcon from "@mui/icons-material/Edit";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import BackBtn from "../Components/BackBtn";
 import { useDispatch, useSelector } from "react-redux";
-import { getDeleteDocument, getSingleDocument, getUpdateDocument } from "../feature/document/documentSlice";
+import {
+  getDeleteDocument,
+  getSingleDocument,
+  getUpdateDocument,
+} from "../feature/document/documentSlice";
 import LoadingPage from "../Components/LoadingPage";
 import { toast } from "react-toastify";
 
@@ -28,18 +32,16 @@ const SingleDocument = () => {
     }
   }, [isError, message]);
 
-
   // const handleDelete = () => {
   //   console.log("Delete")
   //   dispatch(getDeleteDocument(params._id));
   // }
 
-
-   const handleEdit = () => {
+  const handleEdit = () => {
     console.log("Update Document");
-    dispatch(getUpdateDocument(document._id))
-    navigate("/document/createDocument")
-   }
+    dispatch(getUpdateDocument(document._id));
+    navigate("/document/createDocument");
+  };
 
   if (isLoading) {
     return <LoadingPage />;
@@ -54,8 +56,7 @@ const SingleDocument = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-        }}
-      >
+        }}>
         <Typography color="error" variant="h3">
           Data Not Found!!
         </Typography>
@@ -80,8 +81,7 @@ const SingleDocument = () => {
         justifyContent: "center",
         flexDirection: "column",
         paddingBlock: "2rem",
-      }}
-    >
+      }}>
       <BackBtn Location={"/document/allDocument"} />
 
       <Typography variant="h3" color="gray" align="center" fontWeight={"700"}>
@@ -91,26 +91,25 @@ const SingleDocument = () => {
       <Card
         sx={{
           width: {
-         xs: 380,
-         sm: "95%",
-         md: "90%",
-         lg: "90%",
-         xl: 800,
+            xs: 380,
+            sm: "95%",
+            md: "90%",
+            lg: "90%",
+            xl: 800,
           },
           height: {
-         xs: 500,
-         sm: "auto",
-         md: "auto",
-         lg: "auto",
-         xl: "60%",
+            xs: 500,
+            sm: "auto",
+            md: "auto",
+            lg: "auto",
+            xl: "60%",
           },
           marginTop: "2rem",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-        }}
-      >
+        }}>
         <Box
           align="end"
           sx={{
@@ -118,11 +117,10 @@ const SingleDocument = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "end",
-          }}
-        >
+          }}>
           <Link to={`/document/update/${document._id}`}>
             <Button variant="contained" color="warning">
-            <EditIcon />
+              <EditIcon />
             </Button>
           </Link>
 
@@ -136,47 +134,47 @@ const SingleDocument = () => {
             width: "100%",
             height: {
               xs: 700,
-         sm: 800,
-         md: 300,
-         lg: 800,
-         xl: 800,
+              sm: 800,
+              md: 300,
+              lg: 800,
+              xl: 800,
             },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             borderRadius: "0",
-            flexDirection : {
+            flexDirection: {
               xs: "column",
-         sm: "column",
-         md: "row",
-         lg: "row",
-         xl: "row",
-            }
-          }}
-        >
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            },
+          }}>
           <Box
             sx={{
               width: {
                 xs: 300,
-                sm:"60%",
+                sm: "60%",
                 md: "50%",
                 lg: 800,
                 xl: "70%",
               },
-              height:{
+              height: {
                 xs: 500,
-         sm: "60%",
-         md: "90%",
-         lg: 800,
-         xl: "90%",
+                sm: "60%",
+                md: "90%",
+                lg: 800,
+                xl: "90%",
               },
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-            }}
-          >
+            }}>
             <img
-              src={"http://localhost:11000/" + document.photo}
+              src={
+                "https://document-management-3.onrender.com/" + document.photo
+              }
               alt="noImg"
               width="80%"
               height="90%"
@@ -186,7 +184,7 @@ const SingleDocument = () => {
             sx={{
               width: "60%",
               height: {
-                sm : "40%",
+                sm: "40%",
               },
               display: "flex",
               alignItems: "center",
