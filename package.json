@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "build":"npm install && npm install --prefix FrontENd && npm run build --prefix FrontENd"
+    "build":"npm install --prefix ./FrontENd && npm run build --prefix ./FrontENd && npm install"
   },
   "author": "Chitranshi",
   "license": "ISC",
