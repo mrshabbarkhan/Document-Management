@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "build":"npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix FrontENd && npm run build --prefix FrontENd"
+    "build":"npm install && npm install --prefix FrontENd && npm run build --prefix FrontENd"
   },
   "author": "Chitranshi",
   "license": "ISC",
