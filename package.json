@@ -7,7 +7,6 @@
     "server": "node backend/server.js",
     "client": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install --prefix ./FrontENd && npm run build --prefix ./FrontENd && npm install"
   },
   "author": "Chitranshi",
   "license": "ISC",
