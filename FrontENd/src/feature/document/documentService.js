@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://document-management-1-8aya.onrender.com/api/document";
+const API_URL = "/api/document";
 
 // Get All Documents
 const getDocuments = async (token) => {
@@ -52,23 +52,24 @@ const createDocument = async (formData, token) => {
 };
 
 // update Document
-const updateDocument = async (id, formData, token) => {
+const updateDocument = async (id, formData ,token) => {
   const option = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.put(`${API_URL}/${id}`, formData, option);
+  const response = await axios.put(`${API_URL}/${id}`, formData ,option)
   console.log(response.data);
   return response.data;
-};
+}
+
 
 const documentService = {
   getDocuments,
   getDocument,
   createDocument,
   deleteDocument,
-  updateDocument,
+  updateDocument
 };
 
 export default documentService;
