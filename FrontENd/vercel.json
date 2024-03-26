@@ -1,12 +1,5 @@
 {
     "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "https://document-management-3.onrender.com/"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
+        {"source": "/(.*)", "destination": "/"}
     ]
-  }
+}
