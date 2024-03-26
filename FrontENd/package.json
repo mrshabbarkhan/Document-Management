@@ -1,6 +1,6 @@
 {
   "name": "newsbreak",
-  "proxy":"",
+  "proxy": "https://document-management-1-8aya.onrender.com",
   "private": false,
   "version": "0.0.0",
   "type": "module",
