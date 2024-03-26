@@ -6,7 +6,7 @@ const path = require("path");
 // const upload = multer({dest : "uploads/"})
 const { errorHandler } = require("./middleware/errorHandler");
 const app = express();
-const cors = require('cors');
+const cors = require("cors");
 
 const PORT = process.env.PORT || 8000;
 
@@ -42,12 +42,14 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 // Error Handler
 app.use(errorHandler);
