@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://document-management-3.onrender.com",
+        target: "https://document-management-1-8aya.onrender.com",
         changeOrigin: true,
         secure: false,
       },

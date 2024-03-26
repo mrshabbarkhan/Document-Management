@@ -173,7 +173,8 @@ const SingleDocument = () => {
             }}>
             <img
               src={
-                "https://document-management-3.onrender.com/" + document.photo
+                "https://document-management-1-8aya.onrender.com/" +
+                document.photo
               }
               alt="noImg"
               width="80%"
