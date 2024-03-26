@@ -24,22 +24,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", require("./routes/userRoutes"));
 
 // Configure Multer for file uploads
-
+app.get("/", (req, res) => {
+  res.json({
+    msg: "WELCOME TO DOCUMENT API",
+  });
+});
 // Document Routes
-app.use("/api/document", require("./routes/documentRoutes"));
-const __dirname1 = path.resolve();
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "/FrontENd/dist")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname1, "FrontENd", "dist", "index.html"));
-  });
-} else {
-  app.get("/", (req, res) => {
-    res.json({
-      msg: "WELCOME TO DOCUMENT API",
-    });
-  });
-}
+// app.use("/api/document", require("./routes/documentRoutes"));
+// const __dirname1 = path.resolve();
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname1, "/FrontENd/dist")));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname1, "FrontENd", "dist", "index.html"));
+//   });
+// } else {
+
+// }
 
 app.use(
   cors({
